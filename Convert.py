@@ -19,6 +19,7 @@ for l in letters:
             ori=Image.open(str(i))
             a=ori.convert('L')
             a=a.resize((224,224),Image.NEAREST)
+            ori=ori.resize((224,224),Image.NEAREST)
             a.save('../../../test-grey/'+str(idx)+'.jpg')
             ori.save('../../../test-colored/'+str(idx)+'.jpg')
             idx=idx+1
